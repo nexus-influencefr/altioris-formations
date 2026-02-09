@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Documents et informations légales - Altioris Formation">
+    <title>Documents - Altioris Formation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-altioris.png" alt="Logo Altioris Formation">
+                </a>
+                <button type="button" class="mobile-menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu" aria-hidden="true">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="documents.html" class="active">Documents</a></li>
+                    <li><a href="informations.html">Informations</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html" class="btn-cta-nav">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Documents</h1>
+            <p class="page-subtitle">Tous les documents officiels et informations réglementaires</p>
+        </div>
+    </section>
+
+    <!-- Section QUALIOPI - Mise en avant -->
+    <section class="documents-highlight" id="qualiopi">
+        <div class="container">
+            <div class="highlight-box">
+                <div class="highlight-icon">
+                    <img src="images/logo-qualiopi.png" alt="Certification QUALIOPI">
+                </div>
+                <div class="highlight-content">
+                    <h2 class="highlight-title">Organisme certifié QUALIOPI</h2>
+                    <p class="highlight-text">
+                        Altioris Formation est certifié QUALIOPI. Cette certification atteste de la qualité des processus 
+                        mis en œuvre par les prestataires d'actions concourant au développement des compétences.
+                    </p>
+                    <a href="documents/qualiopi-certification.pdf" class="btn-primary" download>Télécharger le certificat QUALIOPI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents par catégorie -->
+    <section class="documents-section">
+        <div class="container">
+            <!-- Documents réglementaires -->
+            <div class="documents-category" id="reglementaires">
+                <h2 class="documents-category-title">Documents Réglementaires</h2>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3 class="document-title">Certification QUALIOPI</h3>
+                        <p class="document-description">Certificat de certification QUALIOPI de l'organisme</p>
+                        <a href="documents/qualiopi-certification.pdf" class="document-link" download>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Télécharger (PDF)
+                        </a>
+                    </div>
+                    <div class="document-card" id="accessibilite">
+                        <div class="document-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="document-title">Déclaration d'accessibilité</h3>
+                        <p class="document-description">Déclaration de conformité d'accessibilité numérique</p>
+                        <a href="documents/accessibilite.pdf" class="document-link" download>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Télécharger (PDF)
+                        </a>
+                    </div>
+                    <div class="document-card" id="cgv">
+                        <div class="document-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3 class="document-title">Conditions Générales de Vente (CGV)</h3>
+                        <p class="document-description">Conditions générales de vente des formations</p>
+                        <a href="documents/cgv.pdf" class="document-link" download>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Télécharger (PDF)
+                        </a>
+                    </div>
+                    <div class="document-card" id="mentions-legales">
+                        <div class="document-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3 class="document-title">Mentions Légales</h3>
+                        <p class="document-description">Informations légales et identification de l'organisme</p>
+                        <a href="mentions-legales.html" class="document-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Télécharger (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autres documents -->
+            <div class="documents-category">
+                <h2 class="documents-category-title">Autres Documents</h2>
+                <div class="documents-grid">
+                    <!-- Les autres documents seront ajoutés ici -->
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3 class="document-title">Statuts</h3>
+                        <p class="document-description">Statuts de l'organisme</p>
+                        <a href="documents/statuts.pdf" class="document-link" download>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Télécharger (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer avec Map -->
+    <footer class="footer">
+        <!-- Section Map intégrée dans le footer -->
+        <div class="footer-map-section">
+            <div class="footer-map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.3919233488666!2d2.291856315674393!3d48.86390707928845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4b8b4b4b5%3A0x6b7e5c8b4b4b4b5!2s49%20Avenue%20d&#39;I%C3%A8na%2C%2075116%20Paris!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localisation Altioris Formation - 49 avenue d'Ièna, 75116 PARIS">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Footer Main Content -->
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- BLOC 1 : PRÉSENTATION -->
+                    <div class="footer-block footer-presentation">
+                        <h4 class="footer-org-title">Altioris Formation</h4>
+                        <p class="footer-presentation-text">
+                            Organisme de formation professionnelle certifié Qualiopi. Sur la route de votre avenir.
+                        </p>
+                    </div>
+
+                    <!-- BLOC 2 : NAVIGATION -->
+                    <div class="footer-block footer-navigation">
+                        <h4 class="footer-block-title">NAVIGATION</h4>
+                        <ul class="footer-nav-list">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="formations.html">Formations</a></li>
+                            <li><a href="documents.html">Documents</a></li>
+                            <li><a href="informations.html">Informations</a></li>
+                            <li><a href="a-propos.html">À propos</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- BLOC 3 : FORMATIONS -->
+                    <div class="footer-block footer-formations">
+                        <h4 class="footer-block-title">FORMATIONS</h4>
+                        <ul class="footer-formations-list">
+                            <li><a href="formations.html#langues">Langues étrangères</a></li>
+                            <li><a href="formations.html#ia-digital">IA, digital et réseaux sociaux</a></li>
+                            <li><a href="formations.html#comptabilite">Comptabilité et gestion d'entreprise</a></li>
+                            <li><a href="formations.html#bureautique">Bureautique et informatique</a></li>
+                        </ul>
+                        <div style="margin-top: var(--spacing-md);">
+                            <a href="formations.html" class="btn-secondary" style="font-size: 0.875rem; padding: var(--spacing-xs) var(--spacing-md);">Voir plus →</a>
+                        </div>
+                    </div>
+
+                    <!-- BLOC 4 : CONTACT -->
+                    <div class="footer-block footer-contact">
+                        <h4 class="footer-block-title">CONTACT</h4>
+                        <div class="footer-contact-list">
+                            <div class="footer-contact-item">
+                                <a href="https://www.google.com/maps/search/?api=1&query=49+avenue+d%27I%C3%A8na+75116+Paris" target="_blank" rel="noopener noreferrer">
+                                    <p>49 avenue d'Ièna</p>
+                                    <p>75116 PARIS</p>
+                                </a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <a href="mailto:formation@altiorisformation.com">
+                                    <p>formation@altiorisformation.com</p>
+                                </a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <a href="tel:0789651792">
+                                    <p>+33 7 89 65 17 92</p>
+                                </a>
+                            </div>
+                        </div>
+                    <!-- BLOC 5 : QUALIOPI & MENTIONS -->
+                    <div class="footer-block footer-certification">
+                        <a href="documents.html#qualiopi" class="footer-qualiopi-logo-bottom">
+                            <img src="images/LogoQualiopi-300dpi-Avec-Marianne.png" alt="Certification QUALIOPI">
+                        </a>
+                        <p class="footer-copyright">&copy; 2025 Altioris Formation. Tous droits réservés.</p>
+                        <div class="footer-bottom-links">
+                            <a href="mentions-legales.html">Mentions légales</a>
+                            <a href="politique-confidentialite.html">Confidentialité</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton Appel Flottant -->
+    <a href="tel:0789651792" class="floating-call-button" aria-label="Appeler Altioris Formation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span class="call-button-text">07.89.65.17.92</span>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script type="module" src="js/lenis-init.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
