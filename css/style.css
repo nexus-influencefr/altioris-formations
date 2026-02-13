@@ -6566,6 +6566,17 @@ body.menu-open {
    CONTACT SECTION - Design moderne
    ============================================ */
 
+/* Hero Contact : même bleu que page Informations */
+.page-hero-contact {
+    background-color: var(--color-primary-dark);
+    background-image: linear-gradient(135deg, rgba(0, 47, 108, 0.88) 0%, rgba(0, 30, 69, 0.92) 100%);
+    background-size: cover;
+    background-position: center;
+}
+.page-hero-contact::before {
+    background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+}
+
 .page-hero-contact .page-subtitle {
     font-size: clamp(1.1rem, 2.5vw, 1.35rem);
     opacity: 0.95;
@@ -7369,34 +7380,71 @@ section + section {
    PAGE FORMATIONS - DESIGN ULTRA MODERNE
    ============================================ */
 
-/* Hero Formations Ultra Moderne - image de fond compta.jpg + filtre bleu Pantone 294 C */
-.formations-hero-new {
-    padding: calc(var(--spacing-xxl) * 2.5) 0 calc(var(--spacing-xxl) * 1.5) 0;
+/* Hero Formations : même espace photo et disposition que page Informations */
+.formations-hero-new,
+.page-formations .formations-page__hero {
     position: relative;
-    min-height: 380px;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    background-color: #1a2a4a;
-    background-image: linear-gradient(rgba(0, 47, 108, 0.5), rgba(0, 47, 108, 0.4)),
+    padding: calc(var(--spacing-xxl) + 72px) var(--spacing-xl) var(--spacing-xxl);
+    text-align: left;
+    background-color: var(--color-primary-dark);
+    background-image: linear-gradient(135deg, rgba(0, 47, 108, 0.88) 0%, rgba(0, 30, 69, 0.92) 100%),
                       url('../images/compta.jpg');
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
-.formations-hero-content-new {
-    max-width: 1200px;
+.formations-hero-new::before,
+.page-formations .formations-page__hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.formations-hero-new__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-formations .formations-hero-new__inner {
     margin: 0;
 }
 
-.formations-hero-title-new {
-    font-size: clamp(4rem, 8vw, 7rem);
+.formations-hero-new__label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--spacing-sm);
+}
+
+.formations-hero-new__title {
+    font-size: clamp(1.875rem, 4.5vw, 2.75rem);
     font-weight: 700;
-    line-height: 1;
-    margin: 0;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
     color: #fff;
+    margin: 0 0 var(--spacing-sm);
     font-family: var(--font-title);
+}
+
+.formations-hero-new__sub {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
 }
 
 /* Section Formations Ultra Moderne */
@@ -7593,8 +7641,9 @@ section + section {
 }
 
 @media (max-width: 768px) {
-    .formations-hero-new {
-        padding: calc(var(--spacing-xxl) * 2) 0 var(--spacing-xxl) 0;
+    .formations-hero-new,
+    .page-formations .formations-page__hero {
+        padding: calc(var(--spacing-xxl) + 48px) var(--spacing-md) var(--spacing-xxl);
     }
     
     .formations-section-new {
