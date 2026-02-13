@@ -15,6 +15,9 @@ Thumbs.db
 *.log
 npm-debug.log*
 
+# Build
+dist/
+
 # Dépendances (si ajoutées plus tard)
 node_modules/
 package-lock.json
@@ -23,3 +26,5 @@ yarn.lock
 # Fichiers temporaires
 *.tmp
 *.temp
+.vercel
+.env*.local

@@ -169,9 +169,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialisation au chargement
     document.addEventListener('DOMContentLoaded', function() {
-        // Animer les cartes avec stagger
+        // Animer les cartes avec stagger (domaine-card exclu : visibles dès le scroll)
         const cardSelectors = [
-            '.domaine-card',
             '.formation-card',
             '.feature-item',
             '.info-card',
@@ -285,4 +284,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// ============================================
+// BOUTON APPEL : visible après le hero (accueil) | CHAT : niveau CTA sur hero, niveau appel ailleurs
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    var hero = document.querySelector('.hero');
+    var callBtn = document.querySelector('.floating-call-button.hide-until-past-hero');
+
+    if (hero && callBtn) {
+        var observer = new IntersectionObserver(
+            function(entries) {
+                if (callBtn) callBtn.classList.toggle('is-visible', !entries[0].isIntersecting);
+            },
+            { root: null, rootMargin: '0px', threshold: 0 }
+        );
+        observer.observe(hero);
+        callBtn.classList.toggle('is-visible', hero.getBoundingClientRect().bottom <= 0);
+    } else if (callBtn) {
+        callBtn.classList.add('is-visible');
+    }
 });

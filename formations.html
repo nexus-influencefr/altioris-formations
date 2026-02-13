@@ -256,6 +256,44 @@
         <span class="call-button-text">07.89.65.17.92</span>
     </a>
 
+    <!-- Bouton Chat (fixe, bas à droite) -->
+    <div id="chatbot-widget" class="chatbot-widget" aria-label="Assistant de chat Altioris Formation">
+        <div class="chatbot-panel" id="chatbot-panel" role="dialog" aria-label="Fenêtre de conversation" aria-hidden="true">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <span class="chatbot-avatar" aria-hidden="true">A</span>
+                    <div>
+                        <strong class="chatbot-title">Altioris</strong>
+                        <span class="chatbot-status">En ligne</span>
+                    </div>
+                </div>
+                <button type="button" class="chatbot-close" id="chatbot-close" aria-label="Fermer le chat">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages" role="log" aria-live="polite">
+                <div class="chatbot-msg chatbot-msg-bot">
+                    <span class="chatbot-msg-avatar">A</span>
+                    <div class="chatbot-msg-bubble">
+                        <p>Bonjour ! Je suis l'assistant d'Altioris Formation. Posez-moi une question sur nos formations, la certification QUALIOPI ou prenez rendez-vous. Comment puis-je vous aider ?</p>
+                    </div>
+                </div>
+            </div>
+            <form class="chatbot-form" id="chatbot-form">
+                <label for="chatbot-input" class="sr-only">Votre message</label>
+                <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Écrivez votre message..." autocomplete="off" maxlength="500">
+                <button type="submit" class="chatbot-send" aria-label="Envoyer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+            </form>
+        </div>
+        <button type="button" class="chatbot-toggle" id="chatbot-toggle" aria-label="Ouvrir le chat" aria-expanded="false">
+            <svg class="chatbot-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg class="chatbot-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span class="chatbot-toggle-text">Chat</span>
+        </button>
+    </div>
+
     <script src="js/main.js"></script>
     <script type="module" src="js/lenis-init.js"></script>
     <script src="js/accessibility.js"></script>

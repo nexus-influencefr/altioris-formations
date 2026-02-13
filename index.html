@@ -12,28 +12,30 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="index.html" class="logo">
-                    <img src="images/logo-altioris.png" alt="Logo Altioris Formation">
+    <header class="nav-header">
+        <nav class="navbar" role="navigation" aria-label="Menu principal">
+            <div class="container nav-inner nav-wrapper">
+                <a href="index.html" class="logo nav-logo" aria-label="Altioris Formation - Accueil">
+                    <img src="images/logo-altioris.png" alt="Altioris Formation">
                 </a>
-                <button type="button" class="mobile-menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button type="button" class="mobile-menu-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
                 </button>
-                <ul class="nav-menu" id="nav-menu" aria-hidden="true">
-                    <li><a href="index.html" class="active">Accueil</a></li>
-                    <li><a href="formations.html">Formations</a></li>
-                    <li><a href="documents.html">Documents</a></li>
-                    <li><a href="informations.html">Informations</a></li>
-                    <li><a href="a-propos.html">À propos</a></li>
-                    <li><a href="contact.html" class="btn-cta-nav">Contact</a></li>
-                </ul>
+                <div class="nav-menu-wrap">
+                    <ul class="nav-menu" id="nav-menu" role="menubar" aria-hidden="true">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
+                        <li class="nav-item"><a href="formations.html" class="nav-link">Formations</a></li>
+                        <li class="nav-item"><a href="documents.html" class="nav-link">Documents</a></li>
+                        <li class="nav-item"><a href="informations.html" class="nav-link">Informations</a></li>
+                        <li class="nav-item"><a href="a-propos.html" class="nav-link">À propos</a></li>
+                        <li class="nav-item nav-item--cta"><a href="contact.html" class="nav-link nav-link--cta btn-cta-nav">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -440,8 +442,8 @@
         </div>
     </footer>
 
-    <!-- Bouton Appel Flottant -->
-    <a href="tel:0789651792" class="floating-call-button" aria-label="Appeler Altioris Formation">
+    <!-- Bouton Appel Flottant (caché sur l'accueil tant que le hero est visible) -->
+    <a href="tel:0789651792" class="floating-call-button hide-until-past-hero" aria-label="Appeler Altioris Formation">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>

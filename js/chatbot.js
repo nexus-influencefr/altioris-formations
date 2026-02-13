@@ -81,16 +81,18 @@
             document.body.appendChild(wrap);
         }
 
-        const panel = document.getElementById('chatbot-panel');
-        const toggle = document.getElementById('chatbot-toggle');
-        const closeBtn = document.getElementById('chatbot-close');
-        const form = document.getElementById('chatbot-form');
-        const input = document.getElementById('chatbot-input');
-        const messagesEl = document.getElementById('chatbot-messages');
+        const panel = wrap.querySelector('#chatbot-panel') || document.getElementById('chatbot-panel');
+        const toggle = wrap.querySelector('#chatbot-toggle') || document.getElementById('chatbot-toggle');
+        const closeBtn = wrap.querySelector('#chatbot-close') || document.getElementById('chatbot-close');
+        const form = wrap.querySelector('#chatbot-form') || document.getElementById('chatbot-form');
+        const input = wrap.querySelector('#chatbot-input') || document.getElementById('chatbot-input');
+        const messagesEl = wrap.querySelector('#chatbot-messages') || document.getElementById('chatbot-messages');
+
+        if (!panel || !toggle || !messagesEl) return;
 
         /* Toujours fermé au chargement : bouton Chat à droite, fenêtre cachée */
-        if (panel) panel.classList.remove('chatbot-panel-open');
-        if (toggle) toggle.classList.remove('chatbot-toggle-open');
+        panel.classList.remove('chatbot-panel-open');
+        toggle.classList.remove('chatbot-toggle-open');
 
         function scrollToBottom() {
             messagesEl.scrollTop = messagesEl.scrollHeight;
@@ -119,7 +121,7 @@
             panel.setAttribute('aria-hidden', 'false');
             toggle.setAttribute('aria-expanded', 'true');
             toggle.classList.add('chatbot-toggle-open');
-            input.focus();
+            if (input) input.focus();
         }
 
         function closeChat() {
@@ -134,19 +136,21 @@
             else openChat();
         });
 
-        closeBtn.addEventListener('click', closeChat);
+        if (closeBtn) closeBtn.addEventListener('click', closeChat);
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const text = input.value.trim();
-            if (!text) return;
-            addMessage(text, false);
-            input.value = '';
-            const reply = getBotReply(text);
-            setTimeout(function() {
-                addMessage(reply, true, true);
-            }, 400);
-        });
+        if (form && input) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const text = input.value.trim();
+                if (!text) return;
+                addMessage(text, false);
+                input.value = '';
+                const reply = getBotReply(text);
+                setTimeout(function() {
+                    addMessage(reply, true, true);
+                }, 400);
+            });
+        }
 
         scrollToBottom();
     }
